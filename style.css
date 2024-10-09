@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: teal;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul li {
+    margin-left: 15px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: teal;
+}
+
+.register-btn {
+    padding: 6px 12px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+}
+
+.cart-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.main-section {
+    text-align: center;
+    padding: 40px 15px;
+    background: linear-gradient(to right, #47c7c5, #00a7a2);
+    color: white;
+}
+
+.search-container {
+    margin: 15px auto;
+    width: 50%;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.main-section h1 {
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.main-section .btn {
+    background-color: teal;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.main-section .btn:hover {
+    background-color: #008f8a;
+}
+
+.course-info {
+    text-align: center;
+    margin: 40px auto;
+    padding: 15px;
+    background-color: #fff;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.course-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.related-tags {
+    margin-top: 15px;
+}
+
+.related-tags span {
+    font-weight: bold;
+    color: #333;
+}
+
+.related-tags a {
+    text-decoration: none;
+    margin-left: 8px;
+    color: teal;
+    padding: 4px 12px;
+    border: 1px solid teal;
+    border-radius: 15px;
+    font-size: 0.85em;
+    transition: background-color 0.3s;
+}
+
+.related-tags a:hover {
+    background-color: teal;
+    color: white;
+}
+
+.course-types {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 1100px;
+    gap: 15px;
+}
+
+.course-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-box:hover {
+    transform: translateY(-4px);
+}
+
+.course-box h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+}
+
+.course-box p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.course-box .btn {
+    background-color: teal;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.course-box .btn:hover {
+    background-color: #008f8a;
+}
+
+@media (max-width: 768px) {
+    .course-types {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <link rel="stylesheet" href="courseList.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Course List</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Instructor Name</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function loadCourses() {
+            const courseList = JSON.parse(localStorage.getItem("courseList")) || [];
+            const tableBody = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+
+            courseList.forEach(course => {
+                const newRow = tableBody.insertRow();
+                newRow.insertCell(0).innerHTML = course.courseTitle;
+                newRow.insertCell(1).innerHTML = course.description;
+                newRow.insertCell(2).innerHTML = course.category;
+                newRow.insertCell(3).innerHTML = `$${course.price}`;
+                newRow.insertCell(4).innerHTML = course.instructorName;
+            });
+        }
+
+        window.onload = loadCourses;
+    </script>
+
+</body>
+
+</html>

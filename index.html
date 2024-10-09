@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="burger">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+            </div>
+            <div class="logo">
+                <span class="logo-text"><i class="fa fa-book" style="margin-right: 0.1em;"></i> Webtech</span>
+            </div>
+            <div class="nav-links">
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cources.html">Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html" class="register-btn">Register</a></li>
+                    <li><a href="#"><img src="shopping-cart (1).png" alt="Cart" class="cart-icon"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-section"> 
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for courses">
+        </div>
+        <h1>Find Your Course</h1>
+        <a href="index.html" class="btn">Visit Courses</a>
+    </section>
+
+    <section class="course-info">
+        <h3>Web Development Courses</h3>
+        <p>Web development courses cover both front-end and back-end development, equipping you with skills to build dynamic and responsive websites. These courses focus on programming languages, frameworks, and tools essential for web development, making you proficient in creating user-friendly and efficient applications.</p>
+        <div class="related-tags">
+            <span>Related:</span>
+            <a href="#">Frontend</a>
+            <a href="#">Backend</a>
+        </div>
+    </section>
+
+    <section class="course-types">
+        <div class="course-box frontend" id="frontend">
+            <h3>Frontend Development</h3>
+            <p>Learn how to build responsive and visually appealing websites using HTML, CSS, JavaScript, and popular frontend frameworks.</p>
+            <a href="#" class="btn">Explore Frontend</a>
+        </div>
+
+        <div class="course-box backend" id="backend">
+            <h3>Backend Development</h3>
+            <p>Master server-side technologies, databases, and APIs to build robust web applications with popular backend frameworks.</p>
+            <a href="#" class="btn">Explore Backend</a>
+        </div>
+    </section>
+
+    <script>
+        const searchInput = document.getElementById("search-input");
+        const courses = document.querySelectorAll(".course-box");
+
+        searchInput.addEventListener("input", function() {
+            const query = searchInput.value.toLowerCase().trim();
+
+            courses.forEach(course => {
+                const courseText = course.innerText.toLowerCase();
+                if (courseText.includes(query)) {
+                    course.style.display = "block";
+                } else {
+                    course.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
